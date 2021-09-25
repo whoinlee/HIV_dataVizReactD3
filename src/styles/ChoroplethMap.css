@@ -1,0 +1,30 @@
+.container {
+  background-color: white;
+  height: 560px;
+  display: flex;
+  justify-content: center; /* horizontal centering */
+  align-items: center; /* vertical centering */
+  border: 1px solid black;
+  padding-left: 20px;
+}
+
+.marks .sphere {
+  fill: #efefef;
+  opacity: 0.25;
+}
+
+.marks .interiors {
+  fill: none;
+  stroke: #cacaca;
+}
+
+.marks .graticules {
+  fill: none;
+  stroke: #cacaca;
+}
+
+circle {
+  cursor: pointer;
+  fill: #137b80;
+  opacity: 0.25;
+}
