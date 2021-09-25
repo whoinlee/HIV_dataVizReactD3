@@ -9,7 +9,7 @@ const graticule = geoGraticule();
 const missingDataColor = '#ccc';
 const Marks = ({ 
     worldAtlas: { countries, interiors },
-    rowByCountry,
+    rowByNumericCodes,
     colorScale,
     colorValue}) => {
         return (<g className="marks">
@@ -17,8 +17,7 @@ const Marks = ({
                 <path className="graticules" d={path(graticule())} />
                 {countries.features.map((feature, i) => {
                     //-- feature.properties.name === country name
-                    const d = rowByCountry.get(feature.properties.name);
-                    if (!d) console.log("country: ", feature.properties.name);
+                    const d = rowByNumericCodes.get(feature.id);
                     return <path key={i}
                                  fill={d? colorScale(colorValue(d)) : missingDataColor}  
                                  d={path(feature)} />
